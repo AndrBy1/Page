@@ -1,0 +1,16 @@
+to start html run start <html name .html>
+
+to have css link to html put <link rel="stylesheet" href="style name.css"> into <head>
+rel="stylesheet": Specifies the relationship between the linked document and the current document. In this case, it indicates that the linked document is a stylesheet.
+href="styles.css": Specifies the URL of the CSS file. The URL can be relative (as in the example) or absolute.
+type="text/css": While technically optional for modern browsers, it's good practice to include it for compatibility with older browsers. It specifies the MIME type of the linked document.
+media="screen": Specifies the media for which the stylesheet is optimized. Common values include screen (for computer screens), print (for printing), and all (for all media types). 
+You can also use media queries here (we will cover media queries in Module 7).
+
+The "Computed" tab in the Elements panel shows the final, calculated values of all CSS properties for the selected element. 
+This is useful for understanding how different CSS rules interact and how the browser is rendering the element.
+use console.log() to output the values of CSS properties to the console
+
+The Network panel allows you to monitor the network requests that your browser makes when loading a webpage. 
+This can be useful for optimizing the performance of your website by identifying slow-loading resources.
+

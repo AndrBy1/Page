@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Syntax Example</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=UnifrakturMaguntia&display=swap');
+        .left { text-align: left; }
+        .right { text-align: right; }
+        .center { text-align: center; }
+        .justify { text-align: justify; }
+        h2 {
+            color: green;
+            font-size: 18px;
+        }
+        .container {
+            width: 500px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .container-right { text-align: right; }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Header </h1>
+
+    <p>This is the first paragraph of content. It needs some styling!</p>
+    <p class="redHighlight">And here is a second paragraph, which which is highlighted.</p>
+    <p class="redHighlight box rounded">And here is a third paragraph, which has multiple classes.</p>
+
+    <div>
+        <p>Even a paragraph inside a div will be targeted by the element selector.</p>
+    </div>
+
+    <div class = "container">
+        <p class="text">This is a paragraph inside the container.</p>
+    </div>
+    
+    <p class="text">This is a paragraph outside the container.</p>
+    <p style="color: purple; font-size: 16px;">This is a paragraph with inline styles. It overrides CSS styles.</p> 
+    
+    <h2> internal style sheet is puts CSS code within the style tags in the head section, here, all h2 will have the style and doesn't need an extra http request</h2>
+    
+    <nav>
+        <ul>
+            <li><a class="nav-link active" href="#">link1</a></li>
+            <li><a class="nav-link" href="#">link2</a></li>
+            <li><a class="nav-link" href="#">link3</a></li>
+            <li><a class="nav-link" href="#">link4</a></li>
+        </ul>
+    </nav>
+
+    <div class="card">
+        <img class="card-image" src="images/Thrag.png" alt="Card Image">
+        <div class="card-body">
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-text">This is some text within the card.</p>
+            <a class="card-button" href="#">Read More</a>
+        </div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <nav id="unique-element">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <p>strong: <strong>strong element represents strong importance, seriousness, or urgency</strong> 
+        em: <em>em element represents stress emphasis of its contents</em>.</p>
+
+    <div id = "BoxModelEx">  
+        <p>This div demonstrates the CSS box model with padding, border, and margin.</p>
+    </div>
+    <div id = "SizeProp">  
+        <p>This div demonstrates the CSS box size properties.</p>
+    </div>
+    <div id = "BorderProp">  
+        <p>This div demonstrates the CSS box border properties.</p>
+    </div>
+    <p class="left">This is a left-aligned paragraph whose class is defined in html style. The text is aligned to the left edge of the container.</p>
+    <p class="right">This is a right-aligned paragraph. The text is aligned to the right edge of the container.</p>
+    <p class="center">This is a center-aligned paragraph. The text is centered within the container.</p>
+    <p class="justify">This is a justify-aligned paragraph. The text is stretched to fill the entire width of the container, creating even left and right margins. This is often used in newspapers and magazines.</p>
+    
+    <div class="container container-right">
+        <p>This text is aligned to the right within the container div.</p>
+    </div>
+
+    <p id = "underline">This p demonstrates the CSS text decoration property with underline.</p>
+    <p id = "overline">This p demonstrates the CSS text decoration property with overline.</p>
+    <p id = "line-through">This p demonstrates the CSS text decoration property with line-through.</p>
+    <p id = "spacing">This p demonstrates the CSS text spacing properties.<br> This next line demonstrates line height.</p>
+
+    <div class = "TxtStyles">  
+        <p class="TxtStyles-font">This demonstrates the font.<br></p>
+        <p class="TxtStyles-style">This demonstrates italics and bold.<br></p>
+        <p class="TxtStyles-size">This demonstrates the size.<br></p>
+    </div>
+
+    <p id = "linkfont">This p demonstrates the CSS text decoration property with link font. https://fonts.google.com/selection/embed</p>
+    <p id = "importfont">This p demonstrates the CSS @import rule to import a font from Google Fonts. https://fonts.google.com/selection/embed</p>
+
+</body>
+</html> 
