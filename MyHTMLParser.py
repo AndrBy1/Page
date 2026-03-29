@@ -14,8 +14,8 @@ class MyHTMLParser:
                     print("Found href: " + line.split('href="')[1].split('"')[0])
                     self.htmlLinks.append(line.split('href="')[1].split('"')[0] + " ")
                     #return line.split('href="')[1].split('"')[0]
+
         return self.htmlLinks
-            
 
     def handle_starttag(self, tag, attrs):
         print("Encountered a start tag: " + tag)
