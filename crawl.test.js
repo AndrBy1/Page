@@ -46,15 +46,15 @@ test('getURLsFromHTML absolute', () => {
     const inputHTMLBody = `
 <html>
     <body>
-        <a href="https://blog.boot.dev"> 
-            Boot.dev Blog
+        <a href="https://example.com"> 
+            example.com 
         </a>
     </body>
 </html>
 `
-    const inputBaseURL = "https://blog.boot.dev"
+    const inputBaseURL = "https://example.com"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
-    const expected = ["https://blog.boot.dev/"]
+    const expected = ["https://example.com/"]
     expect(actual).toEqual(expected)
 
 })
@@ -64,14 +64,14 @@ test('getURLsFromHTML relative', () => {
 <html>
     <body>
         <a href="/path/"> 
-            Boot.dev Blog
+            example.com 
         </a>
     </body>
 </html>
 `
-    const inputBaseURL = "https://blog.boot.dev"
+    const inputBaseURL = "https://example.com"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
-    const expected = ["https://blog.boot.dev/path/"]
+    const expected = ["https://example.com/path/"]
     expect(actual).toEqual(expected)
 
 })
@@ -80,18 +80,18 @@ test('getURLsFromHTML both', () => {
     const inputHTMLBody = `
 <html>
     <body>
-        <a href="https://blog.boot.dev/path1/"> 
-            Boot.dev Blog Path One
+        <a href="https://example.com/path1/"> 
+            example.com Path One
         </a>
         <a href="/path2/"> 
-            Boot.dev Blog Path Two
+            example.com Path Two
         </a>
     </body>
 </html>
 `
-    const inputBaseURL = "https://blog.boot.dev"
+    const inputBaseURL = "https://example.com"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
-    const expected = ["https://blog.boot.dev/path1/", "https://blog.boot.dev/path2/"]
+    const expected = ["https://example.com/path1/", "https://example.com/path2/"]
     expect(actual).toEqual(expected)
 
 })
@@ -107,7 +107,7 @@ test('getURLsFromHTML Invalid', () => {
     </body>
 </html>
 `
-    const inputBaseURL = "https://blog.boot.dev"
+    const inputBaseURL = "https://example.com"
     const actual = getURLsFromHTML(inputHTMLBody, inputBaseURL)
     const expected = []
     expect(actual).toEqual(expected)
