@@ -8,16 +8,30 @@ def getURLsFromHTML(htmlBody, baseURL):
     urls = []
     dom = MyHTMLParser(htmlBody)
     linkElements = dom.findQuery("a")
+    print("Link Elements: " + str(linkElements))
     for linkElement in linkElements:
-        print("Link Element: " + linkElement[:-1])
-        urls.append(linkElement[:-1])
+        #print("Link Element: " + linkElement[:-1])
+        try:
+            urlObj = urlparse(baseURL + linkElement).geturl()
+            print("URL Object: " + str(urlObj))
+        except Exception as e:
+            print("Error parsing URL: " + str(e))
+            continue
+        if linkElement.startswith("/"):
+            
+            #relative URL
+            urls.append(urlObj)
+        else:
+            #absolute URL
+            urls.append(linkElement)
     #print("Link Elements: " + str(linkElements))
+    print("URLs: " + str(urls))
     return urls
 
 def normalizeURL(url):
     urlObj = urlparse(url)
     #print("URL Object: " + str(urlObj))
-
+    
     # .hostname naturally lowercases the hostname
     hostname = urlObj.hostname
 
