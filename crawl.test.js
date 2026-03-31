@@ -10,7 +10,6 @@ test('normalizeURL strip protocol', () => {
     const expected = 'example.com/path'
     
     expect(actual).toEqual(expected)
-
 })
 
 test('normalizeURL strip trailing slash', () => {
