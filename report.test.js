@@ -1,5 +1,4 @@
 const { sortPages } = require("./report.js")
-const {test,expect} = require('@jest/globals')
 
 //normalizeURL takes a URL input and returns a normalized URL string. 
 //ex: it should remove the protocol (http:// or https://) and any trailing slashes from the URL. It should also convert the URL to lowercase.
